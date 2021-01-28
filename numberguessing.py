@@ -34,7 +34,7 @@ def valuestatus(difference,vall):
 value = 0
 count = 0
 
-while True:
+while count != 10:
     value = int(input("Guess the number: "))
     diff = abs(value-number)
     valuestatus(diff, value)
@@ -43,6 +43,9 @@ while True:
     if value == number:
         print("Yeah you got the number in {} tries".format(count))
         break
-
+        
+if count==10:
+    print("MAX GUESS REACHED")
+    print("Num was {}".format(number))
 
 os.system("Pause")
